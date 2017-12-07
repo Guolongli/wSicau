@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='userinfo'><image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image></view>
+  <form bindsubmit='formSubmit'>
+      <view class='row'>
+      <text>账 号：</text>
+      <input type="text" name="user" placeholder="请输入教务账号" />
+    </view>
+    <view class="row">
+      <text>密 码：</text>
+      <input type="password" name="password" placeholder="请输入教务密码" />
+    </view>
+    <view class="row">
+      <button type="primary" form-type="submit">登陆</button>
+    </view>
+  </form>
+</view>

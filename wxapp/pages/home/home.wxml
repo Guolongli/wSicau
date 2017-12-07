@@ -1,0 +1,43 @@
+<!--home.wxml-->
+<view wx:if="{{check==1}}">
+  <view class="title">
+    <view class="month">
+    {{month}}
+    </view>
+    <view class="week">
+    第{{week}}周
+    </view>
+    <view class="day">
+    星期{{weekDay}}
+    </view>
+  </view>
+  <view class="course">
+    <view wx:if="{{course.notice==0}}">
+      <view class="coursename">
+        <view class="wenzi"><text>今日无课</text></view>
+      </view>
+      <view class="coursemessage">做些自己喜欢的事吧</view>
+    </view>
+    <view wx:else>
+      <view wx:for="{{course}}" wx:for-item="item" wx:key="key">
+        <view class="coursename">
+          <view class="wenzi"><text>{{item.coursename}}\n{{item.teacher}}</text></view>
+        </view>
+        <view class="coursemessage">
+          <view>{{item.time}}</view>
+          <view>{{item.classroom}}</view>
+          <view>{{item.campus}}</view>
+        </view>
+      </view>
+    </view>
+    
+    
+  </view>
+  <view class="neirong">
+    <view class='title'>教务处最新通知</view>
+    <view wx:for="{{notice}}" wx:for-item="item" wx:key="key">
+        <view class='item'>{{item.title}}{{item.font}}</view>
+    </view>
+  </view>
+</view>
+<view wx:else></view>

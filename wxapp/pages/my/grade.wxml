@@ -1,0 +1,28 @@
+<!--pages/my/grade.wxml-->
+<view wx:if="{{check==1}}">
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">学期</view>
+    <view class="th">课程</view>
+    <view class="th ">学分</view>
+    <view class="th ">成绩</view>
+    <view class="th ">性质</view>
+  </view>
+  <block wx:for="{{grade}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.semester}}</view>
+      <view class="td">{{item.courseName}} </view>
+      <view class="td">{{item.credits}}</view>
+      <view class="td">{{item.grade}}</view>
+      <view class="td">{{item.nature}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.semester}}</view>
+      <view class="td">{{item.courseName }}</view>
+      <view class="td">{{item.credits}}</view>
+      <view class="td">{{item.grade}}</view>
+      <view class="td">{{item.nature}}</view>
+    </view>
+  </block>
+</view>
+</view>

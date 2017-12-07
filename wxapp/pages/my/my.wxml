@@ -1,0 +1,29 @@
+<!--my.wxml-->
+<view wx:if="{{check==1}}">
+  <view class='userinfo'><image class="userinfo-avatar" src="{{imgPath}}" background-size="cover"></image>
+  <text>学号：{{stuData.num}}\n姓名：{{stuData.name}}\n班级：{{stuData.banji}}\n专业：{{stuData.major}}\n校区：{{stuData.campus}}</text>
+  <text></text>
+  </view>
+  <view class="flex-row search">
+
+  <view class="flex-view-item">
+  <navigator url='./grade'>
+  成绩查询
+  </navigator>
+  </view>
+
+  <view class="flex-view-item">
+  <navigator url='./test'>
+  考试查询
+  </navigator>
+  </view>
+
+  <view class="flex-view-item">
+    <navigator url='./book'>
+  教材查询
+  </navigator>
+  </view>
+
+  </view>
+</view>
+
